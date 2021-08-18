@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     //Variables for Timer function
     var myTimer = Timer()
-    var secondsToCount = 100
+    var secondsToCount = 155
     
     //Variables created from the main.storyboard file (connectivity)
     @IBOutlet var backGround: UIView!
@@ -37,17 +37,36 @@ class ViewController: UIViewController {
         if (secondsToCount > -1){
             timerDisplayed.text = String(secondsToCount)
         }
-        if (secondsToCount > 85) { //100-86 (15s)
+        
+        
+        if (secondsToCount > 140 ) { //155-141 (startup)
             self.view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
-        } else if (secondsToCount > 59){ //85-60 (25s)
+        }
+        else if (secondsToCount > 120){ // 140 - 121 (20s Alt)
             self.view.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        } else if (secondsToCount > 48){ //59 - 49 (10s)
+        }
+        else if (secondsToCount > 105){ //120 - 106 (15s Rest)
             self.view.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        } else if (secondsToCount > 22){ // 48 - 23 (25s)
+        }
+        else if (secondsToCount > 85){ //105 - 86 (20s Both Simutaneously)
             self.view.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        } else if (secondsToCount > 11){ //22 - 12 (10s)
+        }
+        else if (secondsToCount > 70){ //85 - 71 (15s Rest)
             self.view.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        } else {
+        }
+        else if (secondsToCount > 50){ //70 -- 51 (20s Hip Toss)
+            self.view.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        }
+        else if (secondsToCount > 35){ //50 -- 36 (15s Rest)
+            self.view.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        }
+        else if (secondsToCount > 15){ // 35 - 16 (20s Side)
+            self.view.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        }
+        else if (secondsToCount > 0){ // 15 - 1 (15s Rest)
+            self.view.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        }
+        else {
             self.view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1) //End of Timed Variation (SLAM!)
         }
     }
