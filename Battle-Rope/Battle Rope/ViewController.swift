@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     @IBAction func onCLick(_ sender: UIButton) {
         myTimer.invalidate()
         myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        let pressedButton = sender
+        pressedButton.isHidden = true
     }
     
     /* Function that changes the color of the background to represent a change in specific action.
